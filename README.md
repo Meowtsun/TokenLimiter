@@ -119,6 +119,7 @@ Returns state and log
 Can be called to allow [TokenLimiter](#tokenlimiterqueue) to automatically process itself. 
 
 Returns itself for convenient chaining.
+<br>
 
 #### TokenLimiter:Process()
 
@@ -141,4 +142,5 @@ uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
+
 
