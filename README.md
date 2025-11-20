@@ -5,7 +5,7 @@
 Token-based utility for Roblox Lua, able to both queue and execute immediately
 
 > `TokenLimiter` currently does **not use promises**. Callbacks are executed via `pcall` and `task.defer`.  
-> Because of this, it is suitable for **frequent, lightweight operations**, like rate-limiting HTTP requests or small tasks.  
+> It is suitable for operations, like rate-limiting HTTP requests.  
 > Heavy or long-running tasks may block the Roblox scheduler slightly.  
 > The API may change in future releases if promise-based execution is added. 
 
@@ -109,5 +109,6 @@ Returns a boolean
 uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when tokens are processed, returning state and log in the callback.
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 `log: string?` = error message, otherwise `nil`.
+
 
 
