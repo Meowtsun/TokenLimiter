@@ -22,7 +22,7 @@ you can get the model directly from [Creator Store](https://create.roblox.com/st
 
 #### Releases
 
-if you need specific versions you can look into [Releases]()
+if you need specific versions you can look into [Releases](https://github.com/Meowtsun/TokenLimiter/releases)
 
 ---
 
@@ -143,3 +143,4 @@ This uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
+
