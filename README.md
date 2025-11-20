@@ -98,7 +98,7 @@ Returns itself for convenient chaining.
 Can be called to manually process the token.
 <br><br>
 
-<h4 id="tokenlimiterhastoken">#### TokenLimiter:HasToken(): boolean</h4>
+<h4 id="tokenlimiterhastoken">TokenLimiter:HasToken(): boolean</h4>
 
 Returns a boolean
 `boolean` = `true` if a token is available, otherwise `false`.
@@ -109,6 +109,7 @@ Returns a boolean
 uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when tokens are processed, returning state and log in the callback.
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 `log: string?` = error message, otherwise `nil`.
+
 
 
 
