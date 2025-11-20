@@ -51,7 +51,7 @@ end
 ---
 
 ### APIs
-- [TokenLimiterModule](#tokenlimitermodulenew)
+- [TokenLimiterModule](#tokenlimitermodule.new)
   - [`new()`](#tokenlimitermodulenew)
 - [TokenLimiter](#tokenlimiterqueue)
   - [`Queue()`](#tokenlimiterqueue)
@@ -109,3 +109,4 @@ Returns a boolean
 uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when tokens are processed, returning state and log in the callback.
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 `log: string?` = error message, otherwise `nil`.
+
