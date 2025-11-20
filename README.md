@@ -74,7 +74,7 @@ end
   
   - [`HasToken()`](#TokenLimiterHasToken)
 
-- [OnTokenProcessed](#OnTokenProcessed)
+- [OnTokenProcessed](#ontokenprocessed)
 
 ---
 
@@ -143,4 +143,5 @@ This uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
+
 
