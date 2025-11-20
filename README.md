@@ -58,46 +58,44 @@ end
 
 ### APIs
 
-- [TokenLimiterModule](#TokenLimiterModulenew)
+- [TokenLimiterModule](#tokenlimitermodulenew)
   
-  - [`new()`](#TokenLimiterModulenew)
+  - [`new()`](#tokenlimitermodulenew)
 
-- [TokenLimiter](#TokenLimiterQueue)
+- [TokenLimiter](#tokenlimiterqueue)
   
-  - [`Queue()`](#TokenLimiterQueue)
+  - [`Queue()`](#tokenlimiterqueue)
   
-  - [`Try()`](#TokenLimiterTry)
+  - [`Try()`](#tokenlimitertry)
   
-  - [`Init()`](#TokenLimiterInit)
+  - [`Init()`](#tokenlimiterinit)
   
-  - [`Process()`](#TokenLimiterProcess)
+  - [`Process()`](#tokenlimiterprocess)
   
-  - [`HasToken()`](#TokenLimiterHasToken)
+  - [`HasToken()`](#tokenlimiterhastoken)
 
 - [OnTokenProcessed](#ontokenprocessed)
 
 ---
 
-#### TokenLimiterModule.new(requests: number?, window: number?): [TokenLimiter](#TokenLimiterQueue)
+#### TokenLimiterModule.new(requests: number?, window: number?): [TokenLimiter](#tokenlimiterqueue)
 
 `requests: number?` = maximum operations in the window. (default is 3)
 
 `window: number?` = time window in seconds. (default is 10)
 
-Returns [TokenLimiter](#TokenLimiterQueue) back.
+Returns [TokenLimiter](#tokenlimiterqueue) back.
 
-
-
-#### TokenLimiter:Queue(callback: (...A) -> (), ...A): [OnTokenProcessed](#OnTokenProcessed)
+<br>
+#### TokenLimiter:Queue(callback: (...A) -> (), ...A): [OnTokenProcessed](#ontokenprocessed)
 
 `callback: function` = function to run when queue is being processed.
 
 any extra parameters will be passed into the callback.
 
-Returns a signal [OnTokenProcessed](#OnTokenProcessed) back.
+Returns a signal [OnTokenProcessed](#ontokenprocessed) back.
 
-
-
+<br>
 #### TokenLimiter:Try(callback: (...A) -> (), ...A): boolean, string?
 
 `callback: function` = function to run when queue is being processed.
@@ -112,36 +110,30 @@ Returns state and log
 
 `log: string?` = error message, otherwise `nil`.
 
+<br>
+#### TokenLimiter:Init(): [TokenLimiter](#tokenlimiterqueue)
 
-
-#### TokenLimiter:Init(): [TokenLimiter](#TokenLimiterQueue)
-
-Can be called to allow [TokenLimiter](#TokenLimiterQueue) to automatically process itself. 
+Can be called to allow [TokenLimiter](#tokenlimiterqueue) to automatically process itself. 
 
 Returns itself for convenient chaining.
-
-
 
 #### TokenLimiter:Process()
 
 Can be called to manually process the token.
 
-
-
+<br>
 #### TokenLimiter:HasToken(): boolean
 
 Returns a boolean
 
 `boolean` = `true` if a token is available, otherwise `false`.
 
-
+<br>
 
 #### OnTokenProcessed
 
-This uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when tokens are processed, returning state and log in the callback.
+uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when tokens are processed, returning state and log in the callback.
 
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
-
-
