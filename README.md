@@ -71,6 +71,7 @@ end
 
 Returns [TokenLimiter](#tokenlimiterqueue) back.
 <br><br>
+
 ---
 <h4 id="tokenlimiterqueue">TokenLimiter:Queue(callback: (...A) -> (), ...A): [OnTokenProcessed](#ontokenprocessed)</h4>
 
@@ -80,6 +81,7 @@ any extra parameters will be passed into the callback.
 
 Returns a signal [OnTokenProcessed](#ontokenprocessed) back.
 <br><br>
+
 ---
 <h4 id="tokenlimitertry">TokenLimiter:Try(callback: (...A) -> (), ...A): boolean, string?</h4>
 
@@ -95,6 +97,7 @@ Returns state and log
 
 `log: string?` = error message, otherwise `nil`.
 <br><br>
+
 ---
 <h4 id="tokenlimiterinit">TokenLimiter:Init(): [TokenLimiter](#tokenlimiterqueue)</h4>
 
@@ -102,11 +105,13 @@ Can be called to allow [TokenLimiter](#tokenlimiterqueue) to automatically proce
 
 Returns itself for convenient chaining.
 <br><br>
+
 ---
 <h4 id="tokenlimiterprocess">TokenLimiter:Process()</h4>
 
 Can be called to manually process the token.
 <br><br>
+
 ---
 <h4 id="tokenlimiterhastoken">TokenLimiter:HasToken(): boolean</h4>
 
@@ -114,6 +119,7 @@ Returns a boolean
 
 `boolean` = `true` if a token is available, otherwise `false`.
 <br><br>
+
 ---
 <h4 id="ontokenprocessed">OnTokenProcessed</h4>
 
@@ -122,6 +128,7 @@ uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
+
 
 
 
