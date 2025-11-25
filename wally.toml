@@ -1,0 +1,8 @@
+[package]
+name = "meowtsun/tokenlimiter"
+description = "Token-based utility for Roblox Lua, able to both queue and execute immediately"
+version = "0.1.1"
+license = "MIT"
+authors = ["Meowtsun"]
+
+[dependencies]
