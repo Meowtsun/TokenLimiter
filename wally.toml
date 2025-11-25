@@ -4,5 +4,7 @@ description = "Token-based utility for Roblox Lua, able to both queue and execut
 version = "0.1.1"
 license = "MIT"
 authors = ["Meowtsun"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "server"
 
 [dependencies]
