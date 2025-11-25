@@ -63,7 +63,7 @@ end
 
 ---
 
-<h4 id="tokenlimitermodulenew">TokenLimiterModule.new(requests: number?, window: number?): [TokenLimiter](#tokenlimiterqueue)</h4>
+<h4 id="tokenlimitermodulenew">TokenLimiterModule.new(requests: number?, window: number?): TokenLimiter</h4>
 
 `requests: number?` = maximum operations in the window. (default is 3)
 
@@ -73,7 +73,7 @@ Returns [TokenLimiter](#tokenlimiterqueue) back.
 <br><br>
 
 ---
-<h4 id="tokenlimiterqueue">TokenLimiter:Queue(callback: (...A) -> (), ...A): [OnTokenProcessed](#ontokenprocessed)</h4>
+<h4 id="tokenlimiterqueue">TokenLimiter:Queue(callback: (...A) -> (), ...A): OnTokenProcessed</h4>
 
 `callback: function` = function to run when queue is being processed.
 
@@ -99,7 +99,7 @@ Returns state and log
 <br><br>
 
 ---
-<h4 id="tokenlimiterinit">TokenLimiter:Init(): [TokenLimiter](#tokenlimiterqueue)</h4>
+<h4 id="tokenlimiterinit">TokenLimiter:Init(): TokenLimiter</h4>
 
 Can be called to allow [TokenLimiter](#tokenlimiterqueue) to automatically process itself. 
 
@@ -128,6 +128,7 @@ uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
+
 
 
 
