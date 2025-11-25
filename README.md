@@ -20,8 +20,8 @@ you can get the model directly from [Creator Store](https://create.roblox.com/st
 if you need specific versions you can look into [Releases](https://github.com/Meowtsun/TokenLimiter/releases)
 
 #### Wally
-
 you can install using Wally `meowtsun/tokenlimiter@0.1.1`
+
 ---
 
 ### Usage
@@ -131,6 +131,7 @@ uses [Stravant's GoodSignal](https://github.com/stravant/goodsignal). Fires when
 `state: boolean` = `true` if the callback succeeded, `false` if it raised an error. 
 
 `log: string?` = error message, otherwise `nil`.
+
 
 
 
